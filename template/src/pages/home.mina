@@ -1,0 +1,21 @@
+<config>
+{
+  "usingComponents": {
+    "m-author": "components/author"
+  }
+}
+</config>
+
+<style>
+</style>
+
+<template>
+  <view>
+    <author />
+  </view>
+</template>
+
+<script>
+Page({
+})
+</script>

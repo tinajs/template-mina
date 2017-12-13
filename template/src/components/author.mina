@@ -1,0 +1,15 @@
+<config>
+{
+  "component": true
+}
+</config>
+
+<template>
+  <view> <%= username %> </view>
+</template>
+
+<script>
+Component({
+
+})
+</script>

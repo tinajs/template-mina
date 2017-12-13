@@ -1,0 +1,12 @@
+<config>
+{
+  "pages": [
+    "pages/home"
+  ]
+}
+</config>
+
+<script>
+App({
+})
+</script>

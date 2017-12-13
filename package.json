@@ -2,6 +2,10 @@
   "name": "template-mina",
   "version": "0.0.1",
   "description": "Scaffold out a Mina template",
+  "files": [
+    "sao.js",
+    "template"
+  ],
   "repository": {
     "url": "tinajs/template-mina",
     "type": "git"

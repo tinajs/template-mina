@@ -65,9 +65,7 @@ export default {
       NODE_ENV: 'development',
       DEBUG: false,
     }),
-    new MinaEntryPlugin({
-      map: (entry) => ['es6-promise/dist/es6-promise.auto.js', entry],
-    }),
+    new MinaEntryPlugin(),
     new MinaRuntimePlugin({
       runtime: './common.js',
     }),

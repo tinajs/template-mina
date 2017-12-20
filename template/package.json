@@ -6,7 +6,7 @@
   "main": "index.js",
   "author": "<%= username %>",
   "scripts": {
-    "clean": "rimraf ./dist",
+    "clean": "rimraf './dist/!(app.json)**'",
     "prestart": "run-s clean",
     "prebuild": "run-s clean",
     "start": "webpack -w",

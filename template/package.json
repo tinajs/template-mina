@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.1",
   "description": "<%= description %>",
-  "main": "index.js",
   "author": "<%= username %>",
   "scripts": {
     "clean": "rimraf './dist/!(app.json)**'",

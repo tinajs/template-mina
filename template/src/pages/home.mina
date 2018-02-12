@@ -11,7 +11,7 @@
 
 <template>
   <view>
-    <author />
+    Hi <author />!
   </view>
 </template>
 

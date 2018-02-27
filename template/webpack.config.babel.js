@@ -6,6 +6,18 @@ import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
+const loaders = {
+  script: 'babel-loader',
+  style: {
+    loader: 'postcss-loader',
+    options: {
+      config: {
+        path: resolve('./postcss.config.js'),
+      },
+    },
+  },
+}
+
 export default {
   context: resolve('src'),
   entry: './app.mina',
@@ -17,27 +29,12 @@ export default {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
-      },
-      {
         test: /\.mina$/,
         exclude: /node_modules/,
         use: [{
           loader: '@tinajs/mina-loader',
           options: {
-            loaders: {
-              script: 'babel-loader',
-              style: {
-                loader: 'postcss-loader',
-                options: {
-                  config: {
-                    path: resolve('./postcss.config.js'),
-                  },
-                },
-              },
-            },
+            loaders,
           },
         }],
       },
@@ -45,6 +42,16 @@ export default {
         test: /\.mina$/,
         include: /node_modules/,
         use: '@tinajs/mina-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: loaders.javascript,
+      },
+      {
+        test: /\.(css|wxss)$/,
+        exclude: /node_modules/,
+        use: loaders.stylesheet,
       },
       {
         test: /\.png$/,

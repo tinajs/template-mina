@@ -46,12 +46,12 @@ export default {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: loaders.javascript,
+        use: loaders.script,
       },
       {
         test: /\.(css|wxss)$/,
         exclude: /node_modules/,
-        use: loaders.stylesheet,
+        use: loaders.style,
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,

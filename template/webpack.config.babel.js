@@ -54,7 +54,7 @@ export default {
         use: loaders.stylesheet,
       },
       {
-        test: /\.png$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         use: {
           loader: "file-loader",
           options: {

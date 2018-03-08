@@ -12,7 +12,7 @@ test('defaults', async t => {
   })
   t.snapshot(stream.fileList, 'generated files')
 
-  stream.fileList.forEach((file) => {
+  stream.fileList.forEach(file => {
     t.snapshot(stream.fileContents(file), `content of ${file}`)
   })
 })

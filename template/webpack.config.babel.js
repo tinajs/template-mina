@@ -1,4 +1,4 @@
-import {resolve} from 'path'
+import { resolve } from 'path'
 import webpack from 'webpack'
 import MinaEntryPlugin from '@tinajs/mina-entry-webpack-plugin'
 import MinaRuntimePlugin from '@tinajs/mina-runtime-webpack-plugin'

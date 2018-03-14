@@ -1,6 +1,6 @@
 {
   "name": "template-mina",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Scaffold out a Mina Project",
   "files": [
     "sao.js",

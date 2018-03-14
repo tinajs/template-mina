@@ -1,7 +1,7 @@
 <config>
 {
   "usingComponents": {
-    "author": "components/author.mina"
+    "author": "../components/author.mina"
   }
 }
 </config>

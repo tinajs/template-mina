@@ -73,6 +73,15 @@ export default {
           },
         },
       },
+      {
+        test: /\.wxml$/,
+        use: {
+          loader: 'relative-file-loader',
+          options: {
+            name: 'wxml/[name].[hash:6].[ext]',
+          },
+        },
+      },
     ],
   },
   resolve: {

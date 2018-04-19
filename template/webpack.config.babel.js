@@ -75,12 +75,12 @@ export default {
       },
       {
         test: /\.wxml$/,
-        use: {
+        use: [{
           loader: 'relative-file-loader',
           options: {
             name: 'wxml/[name].[hash:6].[ext]',
           },
-        },
+        }, 'wxml-loader'],
       },
     ],
   },

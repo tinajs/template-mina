@@ -8,16 +8,17 @@
     "clean": "rimraf \"./dist/!(app.json|project.config.json)**\"",
     "prestart": "run-s clean",
     "prebuild": "run-s clean",
-    "start": "webpack -w",
+    "start": "webpack --watch --progress",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
     "es6-promise": "^4.1.1"
   },
   "devDependencies": {
-    "@tinajs/mina-entry-webpack-plugin": "^0.6.2",
-    "@tinajs/mina-loader": "^0.6.0",
-    "@tinajs/mina-runtime-webpack-plugin": "^0.1.4",
+    "@tinajs/mina-entry-webpack-plugin": "^1.0.0-0",
+    "@tinajs/mina-loader": "^1.0.0-0",
+    "@tinajs/mina-runtime-webpack-plugin": "^1.0.0-0",
+    "@tinajs/wxml-loader": "^0.3.0-fork.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -33,7 +34,7 @@
     "relative-file-loader": "^1.1.12",
     "rimraf": "^2.6.2",
     "uglifyjs-webpack-plugin": "^1.1.2",
-    "webpack": "^3.8.1",
-    "wxml-loader": "^0.2.1"
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.1.0"
   }
 }

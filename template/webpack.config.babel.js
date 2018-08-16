@@ -2,7 +2,6 @@ import { resolve } from 'path'
 import webpack from 'webpack'
 import MinaEntryPlugin from '@tinajs/mina-entry-webpack-plugin'
 import MinaRuntimePlugin from '@tinajs/mina-runtime-webpack-plugin'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -25,6 +24,7 @@ export default {
     path: resolve('dist'),
     filename: '[name]',
     publicPath: '/',
+    globalObject: 'wx',
   },
   module: {
     rules: [
@@ -80,7 +80,7 @@ export default {
           options: {
             name: 'wxml/[name].[hash:6].[ext]',
           },
-        }, 'wxml-loader'],
+        }, '@tinajs/wxml-loader'],
       },
     ],
   },
@@ -93,13 +93,17 @@ export default {
       DEBUG: false,
     }),
     new MinaEntryPlugin(),
-    new MinaRuntimePlugin({
-      runtime: './common.js',
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
+    new MinaRuntimePlugin(),
+  ],
+  optimization: {
+    splitChunks: {
       name: 'common.js',
       minChunks: 2,
-    }),
-    isProduction && new UglifyJsPlugin(),
-  ].filter(Boolean),
+      minSize: 0,
+    },
+    runtimeChunk: {
+      name: 'runtime.js',
+    },
+  },
+  mode: isProduction ? 'production' : 'none',
 }

@@ -6,16 +6,70 @@
 }
 </config>
 
-<style>
+<style lang="postcss">
+page {
+  height: 100%;
+  background-color: hsl(0, 0%, 99%);
+}
+.main {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 72px;
+  text-align: center;
+  font-size: 36px;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.25em;
+  line-height: 1.5em;
+  color: hsl(0, 0%, 19%);
+  .message {
+    transition: all 800ms ease;
+    opacity: 0;
+    transform: translateY(-50%);
+    &.active {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .logo {
+    transition: all 800ms ease;
+    opacity: 0;
+    transform: translateY(50%);
+    &.active {
+      opacity: 1;
+      transform: none;
+    }
+    image {
+      width: 120px;
+      border-radius: 50%;
+    }
+  }
+  .name {
+    display: inline-block;
+  }
+}
 </style>
 
 <template>
-  <view>
-    Hi <author />!
+  <view class="main">
+    <view class="message {{ isMessageShowed ? 'active' : '' }}">Glad to see you, <author class="name" />!</view>
+    <view class="logo {{ isMessageShowed ? '' : 'active' }}" bind:tap="showMessage"><include src="../templates/logo.wxml"/></view>
   </view>
 </template>
 
 <script>
 Page({
+  data: {
+    isMessageShowed: false,
+  },
+  showMessage () {
+    this.setData({
+      isMessageShowed: true,
+    })
+  },
 })
 </script>

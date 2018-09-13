@@ -15,10 +15,10 @@
     "es6-promise": "^4.1.1"
   },
   "devDependencies": {
-    "@tinajs/mina-entry-webpack-plugin": "^1.0.0-0",
-    "@tinajs/mina-loader": "^1.0.0-0",
-    "@tinajs/mina-runtime-webpack-plugin": "^1.0.0-0",
-    "@tinajs/wxml-loader": "^0.3.0-fork.0",
+    "@tinajs/mina-entry-webpack-plugin": "1.0.0-7",
+    "@tinajs/mina-loader": "1.0.0-7",
+    "@tinajs/mina-runtime-webpack-plugin": "1.0.0-7",
+    "@tinajs/wxml-loader": "0.3.1-fork.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",

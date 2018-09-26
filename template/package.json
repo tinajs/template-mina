@@ -15,9 +15,9 @@
     "es6-promise": "^4.1.1"
   },
   "devDependencies": {
-    "@tinajs/mina-entry-webpack-plugin": "1.0.0-7",
-    "@tinajs/mina-loader": "1.0.0-7",
-    "@tinajs/mina-runtime-webpack-plugin": "1.0.0-7",
+    "@tinajs/mina-entry-webpack-plugin": "1.0.0-8",
+    "@tinajs/mina-loader": "1.0.0-8",
+    "@tinajs/mina-runtime-webpack-plugin": "1.0.0-8",
     "@tinajs/wxml-loader": "0.3.1-fork.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

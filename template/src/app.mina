@@ -1,5 +1,9 @@
 <config>
 {
+  "window": {
+    "navigationBarBackgroundColor": "#25798a",
+    "backgroundColor": "#25798a"
+  },
   "pages": [
     "pages/home.mina"
   ]

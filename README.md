@@ -8,7 +8,7 @@
 
 ## Quick Overview
 ```bash
-npm i -g sao
+npm i -g sao@0.x
 
 sao mina my-app
 cd my-app

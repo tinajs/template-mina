@@ -2,17 +2,19 @@ import path from 'path'
 import test from 'ava'
 import sao from 'sao'
 
-const template = path.resolve(__dirname, '..')
+const generator = path.resolve(__dirname, '..')
 
 test('defaults', async t => {
-  const stream = await sao.mockPrompt(template, {
+  const stream = await sao.mock({ generator }, {
     name: 'foo',
     description: 'bar',
     username: 'baz',
   })
   t.snapshot(stream.fileList, 'generated files')
 
-  stream.fileList.forEach(file => {
-    t.snapshot(stream.fileContents(file), `content of ${file}`)
-  })
+  await stream.fileList.reduce((promise, file) => {
+    return promise
+      .then(() => stream.readFile(file))
+      .then((content) => t.snapshot(content, `content of ${file}`))
+  }, Promise.resolve())
 })

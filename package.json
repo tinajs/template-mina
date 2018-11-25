@@ -6,6 +6,11 @@
     "saofile.js",
     "template"
   ],
+  "keywords": [
+    "sao-generator",
+    "sao",
+    "scaffolding"
+  ],
   "repository": {
     "url": "tinajs/template-mina",
     "type": "git"

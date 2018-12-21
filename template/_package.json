@@ -25,6 +25,7 @@
     "@tinajs/mina-loader": "^1.0.0",
     "@tinajs/mina-runtime-webpack-plugin": "^1.0.0",
     "@tinajs/wxml-loader": "0.3.1-fork.1",
+    "@tinajs/wxs-loader": "^1.0.0",
     "babel-loader": "^8.0.4",
     "cross-env": "^5.1.1",
     "file-loader": "^1.1.5",

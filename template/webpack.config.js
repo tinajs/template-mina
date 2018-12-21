@@ -67,7 +67,7 @@ module.exports = {
       {
         test: /\.wxs$/,
         use: {
-          loader: 'relative-file-loader',
+          loader: '@tinajs/wxs-loader',
           options: {
             name: 'wxs/[name].[hash:6].[ext]',
           },
@@ -84,6 +84,8 @@ module.exports = {
           loader: '@tinajs/wxml-loader',
           options: {
             raw: true,
+            enforceRelativePath: true,
+            root: resolve('src'),
           },
         }],
       },

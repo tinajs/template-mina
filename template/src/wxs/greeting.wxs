@@ -1,0 +1,11 @@
+var random = require('./random.wxs')
+
+var GREETING = [
+  'Hi',
+  'Glad to see you',
+  'How was your day',
+]
+
+module.exports = function greeting () {
+  return random(GREETING)
+}

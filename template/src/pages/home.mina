@@ -57,8 +57,9 @@ page {
 
 <template>
   <view class="main">
-    <view class="message {{ isMessageShowed ? 'active' : '' }}">Glad to see you, <author class="name" />!</view>
+    <view class="message {{ isMessageShowed ? 'active' : '' }}">{{ greeting() }}, <author class="name" />!</view>
     <view class="logo {{ isMessageShowed ? '' : 'active' }}" bind:tap="showMessage"><include src="../templates/logo.wxml"/></view>
+    <wxs src="../wxs/greeting.wxs" module="greeting" />
   </view>
 </template>
 

@@ -1,6 +1,6 @@
 {
   "name": "sao-mina",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Scaffold out a Mina Project",
   "files": [
     "saofile.js",

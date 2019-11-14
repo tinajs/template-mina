@@ -8,9 +8,7 @@
 
 ## Quick Overview
 ```bash
-npm i -g sao@0.x
-
-sao mina my-app
+npx sao mina my-app
 cd my-app
 npm start
 ```
